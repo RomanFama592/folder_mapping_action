@@ -16,7 +16,7 @@ jobs:
                 README.md.template
             sparse-checkout-cone-mode: false
       - name: Update README.md folder map
-        uses: RomanFama592/folder_mapping@v1
+        uses: RomanFama592/folder_mapping_action@v1
       - name: Confirm changes and push 
         run: |
           git config user.name bot-update-readme

@@ -24,7 +24,7 @@ inputs:
 
 runs:
   using: "docker"
-  image: docker://romanfama598/folder_map:v1
+  image: docker://romanfama598/folder_map_action:v1
   args:
     - -sw
     - "${{inputs.search-word}}"

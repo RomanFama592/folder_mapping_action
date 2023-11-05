@@ -1,0 +1,7 @@
+# folder_mapping
+
+## Example
+
+````
+%{{map_folder}}%
+````

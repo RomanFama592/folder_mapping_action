@@ -1,0 +1,10 @@
+.github/
+action.yml
+Dockerfile
+.gitignore
+__pycache__
+Pipfile
+Pipfile.lock
+README.md
+README.md.template
+LICENSE

@@ -1,0 +1,2 @@
+-i https://pypi.org/simple
+gitignore-parser==0.1.8

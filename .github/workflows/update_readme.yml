@@ -1,0 +1,26 @@
+name: "folder_mapping: update readme"
+
+on: 
+  push:
+    branches: main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+            fetch-depth: 0
+            sparse-checkout: |
+                README.md.template
+            sparse-checkout-cone-mode: false
+      - name: Update README.md folder map
+        uses: RomanFama592/folder_mapping@v1
+      - name: Confirm changes and push 
+        run: |
+          git config user.name bot-update-readme
+          git config user.email bot-update-readme@gmail.com
+          git add README.md
+          git commit -m "[bot] Update README based this commit -> $(git rev-parse --short HEAD)"
+          git push origin main

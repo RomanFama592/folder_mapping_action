@@ -1,0 +1,35 @@
+name: "folder_mapping"
+description: "Add folder map into README.md or Update the same"
+author: "RomanFama592"
+inputs:
+  path-directory:
+    description: "The path to the directory where the folder mapping will be performed. This input is optional, and the default value is set to './' (the root directory)."
+    default: "./"
+    required: false
+
+  template-output:
+    description: "The path to the template file for generating the README.md. This input is optional, and the default value is set to './README.md.template'."
+    default: "./README.md.template"
+    required: false
+
+  path-output:
+    description: "The path where the generated README.md file will be saved. This input is optional, and the default value is set to './README.md'."
+    default: "./README.md"
+    required: false
+
+  search-word:
+    description: "This input is used to specify a keyword or search term within the template file (template-output). The workflow will search for this keyword within the template file and insert the folder map at the location where this keyword is found. This input is optional, and the default value is set to 'map_folder'."
+    default: "map_folder"
+    required: false
+
+runs:
+  using: "docker"
+  image: docker://romanfama598/folder_map:v1
+  args:
+    - -sw
+    - "${{inputs.search-word}}"
+    - "${{inputs.path-directory}}"
+    - -to
+    - "${{inputs.template-output}}"
+    - -po
+    - "${{inputs.path-output}}"

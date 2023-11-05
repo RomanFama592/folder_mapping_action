@@ -12,9 +12,6 @@ jobs:
         uses: actions/checkout@v4
         with:
             fetch-depth: 0
-            sparse-checkout: |
-                README.md.template
-            sparse-checkout-cone-mode: false
       - name: Update README.md folder map
         uses: RomanFama592/folder_mapping_action@v1
       - name: Confirm changes and push 

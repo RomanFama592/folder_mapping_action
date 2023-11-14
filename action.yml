@@ -1,8 +1,9 @@
 name: "folder_mapping"
 description: "Incorporate or update the folder mapping information in the README.md file."
 author: "RomanFama592"
-icon: "folder-minus"
-color: "yellow"
+branding:
+  icon: "folder-minus"
+  color: "yellow"
 inputs:
   path-directory:
     description: "The path to the directory where the folder mapping will be performed. This input is optional, and the default value is set to './' (the root directory)."

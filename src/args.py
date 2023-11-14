@@ -1,4 +1,4 @@
-"""Modules"""
+"""Arguments of CLI"""
 from pathlib import Path
 from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser
 
@@ -33,6 +33,7 @@ input_group.add_argument(
     "-sw",
     "--search_word",
     type=str,
+    default="map_folder",
     help=""
 )
 

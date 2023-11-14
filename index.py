@@ -1,4 +1,4 @@
-"""Modules"""
+# pylint: disable=missing-module-docstring
 from pathlib import Path
 from src.args import args
 from src.exceptions import FolderNotExists, MissingSearchWord

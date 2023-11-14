@@ -9,3 +9,4 @@ class MissingsKeys(Exception):
 
 class MissingSearchWord(Exception):
     """Custom exception class for missing a specific key related to words."""
+    

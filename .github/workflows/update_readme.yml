@@ -18,9 +18,6 @@ jobs:
         run: |
           git config user.name bot-update-readme
           git config user.email bot-update-readme@gmail.com
-          git add README.md
-          git commit -m "[bot] Update README based this commit -> $(git rev-parse --short HEAD)"
-          git push origin main
 
           if git diff --quiet; then
             echo "No hay cambios."

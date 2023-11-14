@@ -1,0 +1,17 @@
+{
+    "name": "folder_mapping",
+    "dockerFile": "./Dockerfile",
+    "context": "..",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "Gruntfuggly.todo-tree",
+                "redhat.vscode-yaml",
+                "ms-python.python",
+                "ms-python.pylint",
+                "ms-python.black-formatter"
+            ]
+        }
+    }
+}

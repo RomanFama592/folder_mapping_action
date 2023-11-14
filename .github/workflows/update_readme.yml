@@ -21,3 +21,11 @@ jobs:
           git add README.md
           git commit -m "[bot] Update README based this commit -> $(git rev-parse --short HEAD)"
           git push origin main
+
+          if git diff --quiet; then
+            echo "No hay cambios."
+          else
+            git add README.md
+            git commit -m "[bot] Update README based this commit -> $(git rev-parse --short HEAD)"
+            git push origin main
+          fi

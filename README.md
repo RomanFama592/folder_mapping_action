@@ -40,6 +40,7 @@ Folder map and example of use:
 │          ├── pylint.yml
 │          └── update_readme.yml
 ├── src/
+│     ├── __init__.py
 │     ├── args.py
 │     ├── exceptions.py
 │     ├── map_folders.py
@@ -63,6 +64,10 @@ Folder map and example of use:
 
 ## ✨ Usage
 
+- **Example of using workflow in [README.md.template](https://github.com/RomanFama592/folder_mapping_action/blob/main/README.md.template)**
+
+- **Example of using template in [update_readme.yml](https://github.com/RomanFama592/folder_mapping_action/blob/main/.github/workflows/update_readme.yml)**
+
 ```yaml
 - uses: RomanFama592/folder_mapping_action@v1
   with:
@@ -83,9 +88,8 @@ Folder map and example of use:
     default: "map_folder"
 ```
 
->_In your template put `%{{` + your **search word** + `}}%` to find where you want to put the map folder._
+_In your template put `%{{` + your **search word** + `}}%` to find where you want to put the map folder._
 
-- Example of use in [README.md.template](https://github.com/RomanFama592/folder_mapping_action/blob/main/README.md.template)
 
 <p align="right"><a href="#top">Back to top 🔼</a></p>
 <br>
@@ -106,22 +110,43 @@ Don't forget to **give the project a star ⭐!** Thanks again!
 git clone https://github.com/@your_username/folder_mapping_action
 ```
 
-3. Create your Feature Branch
+3. Install `pipenv`
+
+```bash
+pip install pipenv
+```
+
+4. Install dependencies
+
+```bash
+pipenv install --dev
+```
+
+5. Open enviroment of Python
+
+```bash
+pipenv shell
+```
+
+6. Create your Feature Branch
 
 ```bash
 git checkout -b feature/AmazingFeature
 ```
 
-4. Push to the Branch
+7. Push to the Branch
 
 ```bash
 git push origin feature/AmazingFeature
 ```
 
-5. Open a Pull Request
+8. Open a Pull Request
+
+**Important**: Use "conventional commits" and ensure that the code passes the linter test, pull requests are not accepted without this last point.
 
 <p align="right"><a href="#top">Back to top 🔼</a></p>
 <br>
+
 
 ## 👨‍⚖️ License
 
